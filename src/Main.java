@@ -96,6 +96,12 @@ class GameUI extends JFrame implements ActionListener {
         buttonDivide.setFont(new Font("Arial", Font.BOLD, 25));
         add(buttonDivide);
 
+        JButton buttonClear = new JButton("C");
+        buttonClear.setBounds(100,650, 100, 50);
+        buttonClear.setForeground(Color.RED);
+        buttonClear.setFont(new Font("Arial", Font.BOLD, 25));
+        add(buttonClear);
+
         textField.setBounds(100, 220, 400, 50);
         textField.setEditable(false);
         add(textField);
@@ -115,6 +121,7 @@ class GameUI extends JFrame implements ActionListener {
         buttonMin.addActionListener(this);
         buttonMul.addActionListener(this);
         buttonDivide.addActionListener(this);
+        buttonClear.addActionListener(this);
     }
 
     @Override
@@ -169,6 +176,9 @@ class GameUI extends JFrame implements ActionListener {
                 sign = "/";
                 num = Integer.parseInt(textField.getText());
                 textField.setText("");
+                break;
+            case "C":
+                textField.setText(" ");
                 break;
             case "=":
                 switch (sign) {
