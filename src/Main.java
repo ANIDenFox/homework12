@@ -178,7 +178,7 @@ class GameUI extends JFrame implements ActionListener {
                 textField.setText("");
                 break;
             case "C":
-                textField.setText(" ");
+                textField.setText("0");
                 break;
             case "=":
                 switch (sign) {
